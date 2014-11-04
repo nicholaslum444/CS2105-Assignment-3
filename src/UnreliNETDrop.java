@@ -40,7 +40,7 @@ public class UnreliNETDrop {
 
 					// decide if to drop the packet or not
 					if (rnd.nextFloat() <= drop_pct) {
-						System.out.println("Packet Dropped");
+						System.out.println("Packet Dropped: " + java.util.Arrays.toString(in_pkt.getData()));
 						continue;
 					}
 
@@ -68,7 +68,7 @@ public class UnreliNETDrop {
 				+ ", sk4_dst_port=" + sk4_dst_port + " .");
 
 		try {
-			// Create socket sk1 and sk2
+			// Create socket outPort and sk2
 			sk1 = new DatagramSocket(sk1_dst_port);
 			sk2 = new DatagramSocket();
 

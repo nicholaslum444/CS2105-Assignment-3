@@ -57,7 +57,7 @@ public class UnreliNETNormal {
 				+ ", sk4_dst_port=" + sk4_dst_port + " .");
 
 		try {
-			// Create socket sk1 and sk2
+			// Create socket outPort and sk2
 			sk1 = new DatagramSocket(sk1_dst_port);
 			sk2 = new DatagramSocket();
 

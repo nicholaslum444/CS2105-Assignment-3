@@ -1,0 +1,3 @@
+./corrupt.sh 26239 26230 21230 21730 0.3 testfile out/ tout
+diff testfile out/tout
+echo tc done

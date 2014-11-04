@@ -45,7 +45,7 @@ public class UnreliNETCorrupt {
 						for (int i = 0; i < in_pkt.getLength(); ++i)
 							if (rnd_byte.nextFloat() <= byte_corrupt_pct)
 								in_data[i] = (byte) ((in_data[i] + 1) % 10);
-						System.out.println("Packet Corrupted");
+						System.out.println("Packet Corrupted: " + java.util.Arrays.toString(in_pkt.getData()));
 					}
 
 					// write data to the outgoing socket
@@ -69,7 +69,7 @@ public class UnreliNETCorrupt {
 				+ ", sk4_dst_port=" + sk4_dst_port + " .");
 
 		try {
-			// Create socket sk1 and sk2
+			// Create socket outPort and sk2
 			sk1 = new DatagramSocket(sk1_dst_port);
 			sk2 = new DatagramSocket();
 

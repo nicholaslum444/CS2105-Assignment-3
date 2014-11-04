@@ -112,7 +112,7 @@ public UnreliNETReorder(int sk1_dst_port, int sk2_dst_port, int sk3_dst_port, in
 				+ ", ratio to reorder=" + ratio+".");
 
 		try {
-			// Create socket sk1 and sk2
+			// Create socket outPort and sk2
 			sk1 = new DatagramSocket(sk1_dst_port);
 			sk2 = new DatagramSocket();
 
